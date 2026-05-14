@@ -14,7 +14,5 @@ exec python3 /opt/odoo/odoo-bin \
     --db_user="$USER" \
     --db_password="$PASSWORD" \
     -d "$DB_NAME" \
-    # -u all \
-    # --stop-after-init \
-    --log-level=debug
+    --log-level=debug \
     -i base
