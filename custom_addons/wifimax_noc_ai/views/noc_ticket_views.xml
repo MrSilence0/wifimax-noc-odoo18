@@ -1,0 +1,52 @@
+<odoo>
+
+    <record id="view_noc_ticket_tree" model="ir.ui.view">
+        <field name="name">wifimax.noc.ticket.tree</field>
+        <field name="model">wifimax.noc.ticket</field>
+        <field name="arch" type="xml">
+
+            <list>
+                <field name="name"/>
+                <field name="client_name"/>
+                <field name="device_ip"/>
+                <field name="status"/>
+                <field name="detection_date"/>
+            </list>
+
+        </field>
+    </record>
+
+    <record id="view_noc_ticket_form" model="ir.ui.view">
+        <field name="name">wifimax.noc.ticket.form</field>
+        <field name="model">wifimax.noc.ticket</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="client_name"/>
+                        <field name="device_ip"/>
+                        <field name="status"/>
+                        <field name="detection_date"/>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_noc_ticket" model="ir.actions.act_window">
+        <field name="name">NOC Tickets</field>
+        <field name="res_model">wifimax.noc.ticket</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="menu_wifimax_root"
+              name="Wifimax NOC"/>
+
+    <menuitem id="menu_noc_ticket"
+              name="Tickets"
+              parent="menu_wifimax_root"
+              action="action_noc_ticket"/>
+
+</odoo>

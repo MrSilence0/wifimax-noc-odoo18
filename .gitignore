@@ -1,2 +1,23 @@
 odoo/
 __pycache__/
+
+# Python
+__pycache__/
+*.pyc
+
+# Logs
+logs/
+
+# VSCode
+.vscode/
+
+# Docker volumes
+pgdata/
+db_data/
+
+# Odoo
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

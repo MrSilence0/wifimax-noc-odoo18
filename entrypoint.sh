@@ -5,7 +5,6 @@
 : "${PORT:=5432}"
 : "${USER:=odoo18}"
 : "${PASSWORD:=odoo18}"
-: "${DB_NAME:=odoo18_db}"
 
 exec python3 /opt/odoo/odoo-bin \
     -c /etc/odoo.conf \
@@ -13,6 +12,4 @@ exec python3 /opt/odoo/odoo-bin \
     --db_port="$PORT" \
     --db_user="$USER" \
     --db_password="$PASSWORD" \
-    -d "$DB_NAME" \
-    --log-level=debug \
-    -i base
+    --log-level=debug

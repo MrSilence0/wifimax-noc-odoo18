@@ -1,4 +1,5 @@
 FROM aungmoewai/odoo18e:latest
 
-COPY enterprise_subscription_service.js /opt/odoo/odoo/addons/web_enterprise/static/src/webclient/home_menu/enterprise_subscription_service.js
-COPY home_menu.xml /opt/odoo/odoo/addons/web_enterprise/static/src/webclient/home_menu/home_menu.xml
+COPY nolicense/enterprise_subscription_service.js /opt/odoo/odoo/addons/web_enterprise/static/src/webclient/home_menu/enterprise_subscription_service.js
+
+COPY nolicense/home_menu.xml /opt/odoo/odoo/addons/web_enterprise/static/src/webclient/home_menu/home_menu.xml
