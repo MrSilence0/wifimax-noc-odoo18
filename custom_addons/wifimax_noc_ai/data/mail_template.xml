@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="email_template_noc_ticket_created"
+                model="mail.template">
+
+            <field name="name">
+                NOC Ticket Created
+            </field>
+
+            <field name="model_id"
+                   ref="model_wifimax_noc_ticket"/>
+
+            <field name="subject">
+                Ticket Creado: {{ object.name }}
+            </field>
+
+            <field name="email_to">
+                {{ object.partner_id.email }}
+            </field>
+
+            <field name="body_html" type="html">
+
+                <div>
+                    <h3>Nuevo Ticket Creado</h3>
+
+                    <p>
+                        Su ticket
+                        <strong>{{ object.name }}</strong>
+                        fue creado correctamente.
+                    </p>
+                </div>
+
+            </field>
+
+        </record>
+
+    </data>
+</odoo>

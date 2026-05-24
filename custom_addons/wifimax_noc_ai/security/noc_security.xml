@@ -1,0 +1,23 @@
+<odoo>
+
+    <!-- =========================
+            NOC TECHNICIAN
+    ========================== -->
+
+    <record id="group_noc_user" model="res.groups">
+        <field name="name">NOC Technician</field>
+        <field name="category_id" ref="base.module_category_hidden"/>
+    </record>
+
+
+    <!-- =========================
+            NOC MANAGER
+    ========================== -->
+
+    <record id="group_noc_manager" model="res.groups">
+        <field name="name">NOC Manager</field>
+        <field name="category_id" ref="base.module_category_hidden"/>
+        <field name="implied_ids" eval="[(4, ref('wifimax_noc_ai.group_noc_user'))]"/>
+    </record>
+
+</odoo>

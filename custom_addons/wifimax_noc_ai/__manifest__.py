@@ -6,8 +6,18 @@
     'category': 'Operations',
     'depends': ['base', 'mail'],
     'data': [
+
+        'security/noc_security.xml',
         'security/ir.model.access.csv',
+        'security/noc_record_rules.xml',
+
+        'data/noc_sequence.xml',
+        'data/cron.xml',
+        'data/mail_template.xml',
+        
         'views/noc_ticket_views.xml',
+        'views/noc_ticket_graph_views.xml',
+        'views/noc_ticket_pivot_views.xml',
     ],
     'installable': True,
     'application': True,
